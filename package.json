@@ -1,0 +1,43 @@
+{
+  "name": "vite-plugin-unused-assets",
+  "version": "0.0.1",
+  "description": "查找项目中是否存在是否未使用的资源",
+  "keywords": [
+    "webpack-plugin",
+    "unused-assets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgbx/vite-plugin-unused-assets.git"
+  },
+  "homepage": "https://github.com/wgbx/vite-plugin-unused-assets",
+  "exports": {
+    ".": {
+      "require": "./dist/vite-plugin-unused-assets.cjs",
+      "import": "./dist/vite-plugin-unused-assets.mjs"
+    }
+  },
+  "main": "dist/vite-plugin-unused-assets.cjs",
+  "module": "dist/vite-plugin-unused-assets.mjs",
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs"
+  },
+  "author": "微光北下",
+  "license": "MIT",
+  "dependencies": {
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@types/node": "^20.3.3",
+    "fast-glob": "^3.3.0",
+    "glob": "^7.1.7",
+    "micromatch": "^4.0.5",
+    "rollup": "^3.21.5",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "tslib": "^2.6.0"
+  }
+}
