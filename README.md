@@ -19,14 +19,13 @@ pnpm add vite-plugin-unused-assets -D
 
 ## 用法
 
-- vue.config.js
+- vite.config.ts
 
 ```js
-const UnusedAssetsWebpackPlugin = require('vite-plugin-unused-assets')
+import unusedFiles from 'vite-plugin-unused-assets';
 
-module.exports = {
-  configureWebpack: {
-    plugins: [new UnusedAssetsWebpackPlugin()]
-  }
-}
+export default defineConfig({
+  plugins: [unusedFiles()],
+})
+
 ```

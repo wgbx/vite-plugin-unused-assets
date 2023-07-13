@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-unused-assets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "查找项目中是否存在是否未使用的资源",
   "keywords": [
     "webpack-plugin",
