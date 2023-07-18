@@ -31,6 +31,19 @@ function setFile(data, name = './unused-files.json') {
   }
 }
 
+function classificationFile(files) {
+  const classifiedFiles = {};
+  files.forEach((file) => {
+    const extname = path.extname(file)
+    if (classifiedFiles[extname]) {
+      classifiedFiles[extname].push(file);
+    } else {
+      classifiedFiles[extname] = [file];
+    }
+  });
+  return classifiedFiles
+}
+
 export default function unusedAssets(options) {
   return {
     name: 'vite-plugin-unused-assets',
@@ -40,7 +53,7 @@ export default function unusedAssets(options) {
       const allFiles = await getAllFiles(userOptions)
       const useFiles = [...this.getModuleIds()].filter((item) => !item.includes('node_modules'))
       const files = allFiles.filter(item => !useFiles.includes(item))
-      setFile(files, output)
+      setFile(classificationFile(files), output)
     }
   };
 }

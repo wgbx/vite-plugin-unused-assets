@@ -29,3 +29,7 @@ export default defineConfig({
 })
 
 ```
+- 执行命令
+```
+pnpm build
+```
