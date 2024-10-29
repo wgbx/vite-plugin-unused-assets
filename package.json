@@ -1,6 +1,6 @@
 {
-  "name": "vite-plugin-unused-assets",
-  "version": "0.0.3",
+  "name": "@wgbx/vite-plugin-unused-assets",
+  "version": "0.0.5",
   "description": "查找项目中是否存在是否未使用的资源",
   "keywords": [
     "webpack-plugin",
@@ -16,6 +16,9 @@
       "require": "./dist/vite-plugin-unused-assets.cjs",
       "import": "./dist/vite-plugin-unused-assets.mjs"
     }
+  },
+  "publishConfig": {
+    "@wgbx:registry": "https://npm.pkg.github.com"
   },
   "main": "dist/vite-plugin-unused-assets.cjs",
   "module": "dist/vite-plugin-unused-assets.mjs",
